@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/user1"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FFCCCCCC"
+        android:id="@+id/iconItem"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="10dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/nicname"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10분전"
+                android:textSize="8dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp"/>
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/ratingBarStyleSmall"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:rating="3"
+                android:id="@+id/com_ratingbar"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/ratxt"/>
+
+        </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="10dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/review"/>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp">
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="15dp"
+                android:background="@drawable/shape"
+                android:text="추천"
+                android:textSize="8dp"
+                android:textColor="#000"
+                android:id="@+id/recommend" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="8dp"
+                android:textColor="#000"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/reco_txt"/>
+
+
+
+
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="15dp"
+                android:background="@drawable/shape"
+                android:text="신고하기"
+                android:textSize="8dp"
+                android:textColor="#AEAEAE"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/report"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
