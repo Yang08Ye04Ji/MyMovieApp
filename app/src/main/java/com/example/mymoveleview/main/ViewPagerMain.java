@@ -1,9 +1,11 @@
-package com.example.mymoveleview;
+package com.example.mymoveleview.main;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
+import android.os.UserManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -26,11 +28,9 @@ import android.widget.TextView;
 import com.example.mymoveleview.CustomerService.CustomerServiceActivity;
 import com.example.mymoveleview.Event.EventActivity;
 import com.example.mymoveleview.Login.LoginActivity;
-import com.example.mymoveleview.fragment.Fragment1;
-import com.example.mymoveleview.fragment.Fragment2;
-import com.example.mymoveleview.fragment.Fragment3;
-import com.example.mymoveleview.fragment.Fragment4;
-import com.example.mymoveleview.fragment.Fragment5;
+import com.example.mymoveleview.Login.LoginRequest;
+import com.example.mymoveleview.R;
+import com.example.mymoveleview.TicketActivity;
 import com.example.mymoveleview.store.StoreActivity;
 
 import java.util.ArrayList;
@@ -82,7 +82,6 @@ public class ViewPagerMain extends AppCompatActivity implements NavigationView.O
         pager.setAdapter(adapter);
 
 
-
             ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
                             R.string.navigation_drawer_open, R.string.navigation_drawer_close);
          drawer.addDrawerListener(toggle);
@@ -97,8 +96,9 @@ public class ViewPagerMain extends AppCompatActivity implements NavigationView.O
          final TextView tv_id = (TextView)header.findViewById(R.id.tv_id);
          final TextView text = (TextView)header.findViewById(R.id.text);
 
-        Intent intent2 = getIntent();
-        String userID = intent2.getStringExtra("userID");
+
+        String userID = getIntent().getStringExtra("userID" );
+        text.setText("님 환영합니다.");
         tv_id.setText(userID);
 
 
@@ -106,9 +106,7 @@ public class ViewPagerMain extends AppCompatActivity implements NavigationView.O
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(ViewPagerMain.this, LoginActivity.class);
-                startActivity(i);
-
+                Logout();
 
             }
         });
@@ -153,10 +151,12 @@ public class ViewPagerMain extends AppCompatActivity implements NavigationView.O
 
           if(id == R.id.fr1) {
 
+
             Intent intent = new Intent(ViewPagerMain.this, TicketActivity.class);
             startActivity(intent);
 
         }else if(id == R.id.fr2){
+
 
             Intent intent = new Intent(ViewPagerMain.this, EventActivity.class);
             startActivity(intent);
@@ -168,6 +168,7 @@ public class ViewPagerMain extends AppCompatActivity implements NavigationView.O
              startActivity(intent);
 
         }else if (id == R.id.go) {
+
 
             Intent intent = new Intent(ViewPagerMain.this, CustomerServiceActivity.class);
             startActivity(intent);
@@ -255,6 +256,30 @@ public class ViewPagerMain extends AppCompatActivity implements NavigationView.O
         return  super.onOptionsItemSelected(item);
 
     }
+
+    public void Logout () {
+
+        new AlertDialog.Builder(this)
+                .setTitle("로그아웃")
+                .setMessage("로그아웃 하시겠습니까?")
+                .setPositiveButton("로그아웃", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent i = new Intent(ViewPagerMain.this,LoginActivity.class);
+                        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                        startActivity(i);
+                    }
+                })
+                .setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                })
+                .show();
+    }
+
+
 
 
 }

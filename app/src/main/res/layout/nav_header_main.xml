@@ -19,28 +19,37 @@
         android:layout_marginTop="10dp"
         android:src="@drawable/ic_account_circle_black_24dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="8dp"
-        android:text="환영합니다."
-        android:id="@+id/text"
-        android:textColor="#fff"/>
+        android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="8dp"
-        android:text=""
-        android:id="@+id/tv_id"
-        android:textColor="#fff"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:id="@+id/tv_id"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:text=""
+            android:id="@+id/text"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="로그인"
+        android:text="로그아웃"
         android:id="@+id/log_btn"
         android:background="#000"
         android:layout_marginLeft="150dp"

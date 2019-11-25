@@ -58,7 +58,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
-                android:id="@+id/ratxt"/>
+                android:id="@+id/ratxt"
+                android:layout_marginLeft="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="점" />
 
         </LinearLayout>
 
@@ -98,6 +103,13 @@
                 android:layout_marginLeft="5dp"
                 android:id="@+id/reco_txt"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
 
 
 
@@ -108,7 +120,6 @@
                 android:text="신고하기"
                 android:textSize="8dp"
                 android:textColor="#AEAEAE"
-                android:layout_marginLeft="5dp"
                 android:id="@+id/report"/>
 
 

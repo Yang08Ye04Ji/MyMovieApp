@@ -80,7 +80,7 @@ public class MovieInformationItemView extends LinearLayout {
 
                  up =! up;
 
-                Toast.makeText(context,"리스트 클릭",Toast.LENGTH_SHORT).show();
+               // Toast.makeText(context,"리스트 클릭",Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -118,7 +118,7 @@ public class MovieInformationItemView extends LinearLayout {
                             }
                         })
                         .show();
-                Toast.makeText(context,"신고하기 클릭",Toast.LENGTH_SHORT).show();
+               // Toast.makeText(context,"신고하기 클릭",Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -146,6 +146,11 @@ public class MovieInformationItemView extends LinearLayout {
     public void setRating_txt2 (String rating_txt2){
 
         ratxt.setText(rating_txt2);
+    }
+
+    public void setRating2(float rating2){
+
+        com_ratingbar.setRating(rating2);
     }
 
 

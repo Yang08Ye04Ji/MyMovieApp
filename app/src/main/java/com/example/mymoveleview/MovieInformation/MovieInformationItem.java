@@ -5,14 +5,15 @@ public class MovieInformationItem {
     String name; //id
     String text; //revieText
     String rating_txt2;
+    float rating2;
 
 
 
-    public MovieInformationItem(String name, String text , String rating_txt2){
+    public MovieInformationItem(String name, String text , String rating_txt2, float rating2){
         this.name = name;
         this.text = text;
         this.rating_txt2 = rating_txt2;
-
+        this.rating2 = rating2;
 
     }
 
@@ -41,4 +42,11 @@ public class MovieInformationItem {
         this.rating_txt2 = rating_txt2;
     }
 
+    public float getRating2() {
+        return rating2;
+    }
+
+    public void setRating2(float rating2) {
+        this.rating2 = rating2;
+    }
 }

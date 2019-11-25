@@ -34,9 +34,7 @@ public class MovieInformationAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
 
-
         MovieInformationItemView view = null;
-
 
         if(convertView == null){
             view = new MovieInformationItemView(parent.getContext());
@@ -52,10 +50,13 @@ public class MovieInformationAdapter extends BaseAdapter {
         view.setName(item.getName());
         view.setText(item.getText());
         view.setRating_txt2(item.getRating_txt2());
+        view.setRating2(item.getRating2());
 
 
 
 
         return view;
     }
+
+
 }

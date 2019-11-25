@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.mymoveleview.R;
-import com.example.mymoveleview.ViewPagerMain;
+import com.example.mymoveleview.main.ViewPagerMain;
 
 public class CustomerServiceActivity extends AppCompatActivity {
 

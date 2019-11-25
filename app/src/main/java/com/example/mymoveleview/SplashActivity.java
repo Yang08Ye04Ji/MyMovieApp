@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.mymoveleview.Login.LoginActivity;
+
 public class SplashActivity extends Activity {
 
 
@@ -17,7 +19,7 @@ public class SplashActivity extends Activity {
             e.printStackTrace();
         }
 
-        startActivity(new Intent(this,TutorialActivity.class));
+        startActivity(new Intent(this, TutorialActivity.class));
         SplashActivity.this.finish();
 
     }

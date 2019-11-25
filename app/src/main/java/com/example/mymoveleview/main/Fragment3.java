@@ -1,4 +1,4 @@
-package com.example.mymoveleview.fragment;
+package com.example.mymoveleview.main;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

@@ -54,6 +54,8 @@ public class RegisterActivity extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(),"회원등록확인",Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
                                 startActivity(intent);
+                                finish();
+
                             }else {
                                 Toast.makeText(getApplicationContext(),"회원등록실패",Toast.LENGTH_SHORT).show();
                                 return;

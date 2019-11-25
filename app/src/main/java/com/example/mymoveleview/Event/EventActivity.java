@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.mymoveleview.R;
-import com.example.mymoveleview.ViewPagerMain;
+import com.example.mymoveleview.main.ViewPagerMain;
 
 import java.util.ArrayList;
 

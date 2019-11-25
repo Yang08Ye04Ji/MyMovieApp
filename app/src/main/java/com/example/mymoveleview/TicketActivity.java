@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.example.mymoveleview.main.ViewPagerMain;
+
 public class TicketActivity extends AppCompatActivity {
 
 
@@ -40,7 +42,7 @@ public class TicketActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(TicketActivity.this,ViewPagerMain.class);
+                Intent i = new Intent(TicketActivity.this, ViewPagerMain.class);
                 startActivity(i);
             }
         });

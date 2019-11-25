@@ -1,4 +1,4 @@
-package com.example.mymoveleview.fragment;
+package com.example.mymoveleview.main;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -29,30 +29,32 @@ import com.google.gson.Gson;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Fragment4 extends Fragment {
+public class Fragment2 extends Fragment {
 
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment4,container,false);
+        ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment2,container,false);
 
-        final TextView frg_title = (TextView) rootView.findViewById(R.id.frg_title);
-        final TextView frg_reservation_grade = (TextView)rootView.findViewById(R.id.frg_reservation_grade);
-        final TextView frg_reservation_rate = (TextView)rootView.findViewById(R.id.frg_reservation_rate);
-        final TextView frg_grade = (TextView)rootView.findViewById(R.id.frg_grade);
-        final TextView frg_date = (TextView)rootView.findViewById(R.id.frg_date);
+        final TextView frg_title = (TextView) rootView.findViewById(R.id.frg_title2);
+        final TextView frg_reservation_grade = (TextView)rootView.findViewById(R.id.frg_reservation_grade2);
+        final TextView frg_reservation_rate = (TextView)rootView.findViewById(R.id.frg_reservation_rate2);
+        final TextView frg_grade = (TextView)rootView.findViewById(R.id.frg_grade2);
+        final TextView frg_date = (TextView)rootView.findViewById(R.id.frg_date2);
 
-        ImageView imageView = (ImageView)rootView.findViewById(R.id.imageView);
+        ImageView imageView = (ImageView)rootView.findViewById(R.id.imageView2);
 
-        String url6= "https://movie-phinf.pstatic.net/20181206_87/1544080398551iRbue_JPEG/movie_image.jpg";
-        ImageLodeTask task = new ImageLodeTask(url6,imageView);
+        String url4= "https://movie-phinf.pstatic.net/20170925_296/150631600340898aUX_JPEG/movie_image.jpg";
+        ImageLodeTask task = new ImageLodeTask(url4,imageView);
         task.execute();
+
 
         if(AppHelper.requestQueue == null){
             AppHelper.requestQueue = Volley.newRequestQueue(getContext());
         }
+
 
         String url ="http://" + AppHelper.host + ":" + AppHelper.port + "/movie/readMovieList";
         url += "?" + "type=1";
@@ -75,12 +77,13 @@ public class Fragment4 extends Fragment {
 
 
 
-                            MovieInfo movieInfo = movieList.result.get(3);
+                            MovieInfo movieInfo = movieList.result.get(1);
 
                             frg_title.append(movieInfo.title);
                             frg_reservation_grade .append(movieInfo.reservation_grade);
                             frg_grade.append(movieInfo.grade);
                             frg_date.append(movieInfo.date);
+
 
 
                         }

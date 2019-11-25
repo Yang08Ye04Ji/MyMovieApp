@@ -33,9 +33,9 @@ public class MovieInformationActivity extends AppCompatActivity  {
     TextView mov_director ,mov_actor,mov_audience_rating;
     TextView mov_genre, mov_duration, mov_reservation_grade;
     TextView mov_reservation_rate, mov_audience;
-    EditText edit_id, edit_txt;
+    EditText edit_id,edit_txt;
     Button likeUp, likeDown, reviewButton, button;
-    Button movie_button;
+    Button movie_button,cancelButton;
     RatingBar rating;
     ListView listView;
     MovieInformationAdapter adapter;
@@ -58,6 +58,7 @@ public class MovieInformationActivity extends AppCompatActivity  {
         likeUpText = (TextView)findViewById(R.id.likeUpText);
         likeDownText = (TextView)findViewById(R.id.likeDownText);
         reviewButton = (Button)findViewById(R.id.reviewButton);
+        cancelButton = (Button)findViewById(R.id.cancelButton);
         edit_id = (EditText)findViewById(R.id.edit_id);
         edit_txt = (EditText)findViewById(R.id.edit_txt);
         button = (Button)findViewById(R.id.button);
@@ -83,6 +84,8 @@ public class MovieInformationActivity extends AppCompatActivity  {
         mImage04 = (ImageView)findViewById(R.id.images04);
         mImage05 = (ImageView)findViewById(R.id.images05);
         movie_button = (Button)findViewById(R.id.movie_button);
+
+
 
 
         mImage01.setOnClickListener(new View.OnClickListener() {
@@ -170,7 +173,7 @@ public class MovieInformationActivity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
 
-                String url = "https://www.youtube.com/watch?v=Yhuejnvc6ns";
+                String url = "https://youtu.be/CCYl_7lUU2A";
 
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                 startActivity(intent);
@@ -265,12 +268,32 @@ public class MovieInformationActivity extends AppCompatActivity  {
                 String name = edit_id.getText().toString();
                 String text = edit_txt.getText().toString();
                 String rating_txt2 = rating_txt.getText().toString();
+                float rating2 = rating.getRating();
 
-                adapter.addItem(new MovieInformationItem(name,text,rating_txt2));
+                edit_txt.setText("");
+                edit_id.setText("");
+                rating_txt.setText("");
+                rating.setRating(0);
+
+                adapter.addItem(new MovieInformationItem(name,text,rating_txt2,rating2));
                 adapter.notifyDataSetChanged();
 
             }
         });
+
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                edit_id.setText("");
+                edit_txt.setText("");
+                rating_txt.setText("");
+                rating.setRating(0);
+
+            }
+        });
+
+
 
 
      likeUp.setOnClickListener(new View.OnClickListener() {
