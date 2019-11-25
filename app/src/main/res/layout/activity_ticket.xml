@@ -97,7 +97,7 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="200dp"
-                android:src="@drawable/ic_menu_slideshow"/>
+                android:src="@drawable/movie_image_02"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
