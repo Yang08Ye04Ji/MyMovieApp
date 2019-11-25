@@ -37,7 +37,7 @@
         <activity android:name=".Event.EventActivity" />
         <activity android:name=".CustomerService.CustomerServiceActivity" />
         <activity android:name=".TicketActivity" />
-        <activity android:name=".ViewPagerMain">
+        <activity android:name=".main.ViewPagerMain">
 
 
 
