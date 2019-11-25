@@ -24,7 +24,7 @@
             android:id="@+id/mov_image"
             android:layout_width="200dp"
             android:layout_height="250dp"
-            android:src="@drawable/ic_action_name"
+            android:src="@drawable/movie_image_02"
             android:layout_gravity="left"
             android:padding="20dp"/>
 
@@ -386,7 +386,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="감독/출현"
+                            android:text="감독/출연"
                             android:textStyle="bold"
                             android:textSize="20dp"
                             android:paddingBottom="5dp"/>
@@ -603,12 +603,14 @@
                                android:layout_width="wrap_content"
                                android:layout_height="wrap_content"
                                android:text="0"
-                               android:id="@+id/rating_txt"/>
+                               android:id="@+id/rating_txt"
+                               android:layout_marginLeft="10dp"/>
 
                            <TextView
                                android:layout_width="wrap_content"
                                android:layout_height="wrap_content"
-                               android:text="점"/>
+                               android:text="점"
+                               />
                            
                            
                        </LinearLayout>
@@ -629,7 +631,7 @@
                                android:layout_width="wrap_content"
                                android:layout_height="wrap_content"
                                android:text=""
-                               android:hint="아이디를 입력해주세요"
+                               android:hint="아이디를 입력해주세요."
                                android:id="@+id/edit_id"/>
 
 
@@ -652,7 +654,8 @@
                                android:layout_height="wrap_content"
                                android:text=""
                                android:hint="내용을 입력해주세요"
-                               android:id="@+id/edit_txt"/>
+                               android:id="@+id/edit_txt"
+                               android:maxLength="20"/>
 
                        </LinearLayout>
 
@@ -664,11 +667,12 @@
                            android:gravity="right">
 
                            <Button
+                           android:id="@+id/reviewButton"
                            android:layout_width="wrap_content"
                            android:layout_height="30dp"
                            android:text="확인"
                            android:background="#fff"
-                           android:id="@+id/reviewButton" />
+                           />
 
                            <Button
                                android:layout_width="wrap_content"
